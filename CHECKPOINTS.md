@@ -1,16 +1,9 @@
-# Checkpoint availability
+# Checkpoint release
 
-The intended upstream location is
-https://huggingface.co/BDeM/Gated-Context-Memory/tree/main/checkpoints .
-An unauthenticated access check during release preparation failed. Public access,
-file hashes, backbone revisions, and mappings from checkpoints to paper results
-are not yet verified. No weights are redistributed by this repository.
+Trained checkpoints will be released after paper acceptance. No checkpoint
+downloads are public at this stage. Runtime logs and per-example records are
+not part of the release.
 
-You can train an adapter using the README tutorial. Before evaluating an existing
-adapter, verify its provenance and match its backbone, writer depth, state budget,
-projection, and reader-adapter configuration. Do not substitute one run's checkpoint
-or evaluation protocol for another when reproducing a table.
-
-A completed release should provide a manifest with checkpoint path, SHA-256,
-base-model revision, training configuration, evaluation command, and table/figure
-identifier for each published result.
+The checkpoint release will include file hashes, base-model revisions,
+training configurations, and evaluation commands. Until then, the README
+describes training from the base model without released GCM weights.

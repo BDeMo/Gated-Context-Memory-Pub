@@ -1,5 +1,7 @@
 # Gated Context Memory
 
+[Project page](https://bdemo.github.io/Gated-Context-Memory-Pub/)
+
 GCM combines a query-conditioned memory writer, an adapted reader, and
 first-token confidence for detecting compression failures. Raw-context fallback
 is one use of the signal, not a guarantee of improved performance.
@@ -63,9 +65,9 @@ interpreting these metrics as benchmark performance.
 
 ## Checkpoints and result mapping
 
-See [CHECKPOINTS.md](CHECKPOINTS.md). Pretrained checkpoint access and the
-checkpoint-to-paper-table mapping remain pending verification; this snapshot
-must not yet be treated as a complete reproduction of every paper table.
+Trained checkpoints will be released after paper acceptance; see
+[CHECKPOINTS.md](CHECKPOINTS.md). This snapshot must not yet be treated as a
+complete reproduction of every paper table.
 Do not load untrusted PyTorch pickle checkpoints.
 
 ## Tests
@@ -77,3 +79,11 @@ pytest -q tests
 
 See [DATA_SOURCES.md](DATA_SOURCES.md) for dataset provenance. Logging is
 disabled in the tutorial; opt in using your own WandB account if desired.
+
+## Project website
+
+The static page lives in `docs/`, with no build dependencies. GitHub Pages
+serves `main` / `docs`. To migrate to an institutional repository, copy the
+source, enable Pages with that source, and update the project-page link above.
+Assets use relative paths; code links follow the GitHub Pages owner/repository.
+For a custom domain, set `repositoryOverride` in `docs/site.js`.
