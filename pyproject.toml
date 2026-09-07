@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcm"
+version = "0.1.0"
+description = "Gated Context Memory — a frozen LM as its own context compressor, with a do-no-harm gate."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "torch>=2.11",
+    "transformers>=5.10",
+    "accelerate>=1.13",
+    "datasets>=4.8",
+    "huggingface-hub>=1.19",
+    "loguru>=0.7",
+    "numpy>=2.4",
+    "pandas>=3.0",
+    "pyarrow>=24.0",
+    "sentencepiece>=0.2",
+    "safetensors>=0.8",
+    "tqdm>=4.68",
+    "wandb>=0.19",
+]
+
+[project.optional-dependencies]
+baselines = [
+    "kvpress",
+    "llmlingua",
+    "selective-context",
+    "spacy",
+]
+qwen35 = [
+    "flash-linear-attention>=0.5",
+    "fla-core>=0.5",
+    "triton>=3.6",
+]
+dev = ["pytest>=8.3", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

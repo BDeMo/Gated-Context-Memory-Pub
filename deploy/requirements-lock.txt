@@ -1,0 +1,39 @@
+# Exact working environment for the GCM self-compressor experiments (Qwen3.5 + linear-attention models).
+# Captured from the live venv on 2026-06-17. Install with the CUDA 12.8 wheel index:
+#   pip install -r requirements-lock.txt --extra-index-url https://download.pytorch.org/whl/cu128
+# Python 3.12.8 / CUDA 12.8.  torch 2.11 + transformers 5.10 are REQUIRED for the `qwen3_5` architecture.
+torch==2.11.0+cu128
+transformers==5.10.1
+tokenizers==0.22.2
+accelerate==1.13.0
+datasets==4.8.5
+huggingface_hub==1.19.0
+safetensors==0.8.0
+hf-xet==1.5.1
+# linear-attention kernels (gated delta rule); we force the pure-torch fallback on Hopper via gcm.compat
+flash-linear-attention==0.5.0
+fla-core==0.5.0
+triton==3.6.0
+# experiment tracking
+wandb==0.27.2
+sentry-sdk==2.63.0
+GitPython==3.1.50
+# numerics / data
+numpy==2.4.6
+pandas==3.0.3
+pyarrow==24.0.0
+sentencepiece==0.2.1
+einops==0.8.2
+regex==2026.5.9
+ml_dtypes==0.5.4
+# misc runtime deps pinned for reproducibility
+pydantic==2.13.4
+PyYAML==6.0.3
+protobuf==7.35.1
+tqdm==4.68.2
+psutil==7.2.2
+rich==15.0.0
+loguru==0.7.3
+typer==0.25.1
+requests==2.34.2
+filelock==3.29.0
