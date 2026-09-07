@@ -1,6 +1,6 @@
 # Gated Context Memory
 
-[Project page](https://bdemo.github.io/Gated-Context-Memory-Pub/)
+[Project page](https://nokia-applied-research.github.io/Gated-Context-Memory-Pub/)
 
 GCM combines a query-conditioned memory writer, an adapted reader, and
 first-token confidence for detecting compression failures. Raw-context fallback
@@ -18,7 +18,7 @@ Use Linux, Python 3.12, and an NVIDIA CUDA environment. Training an 8B model
 requires substantial GPU memory; CPU-only training is not supported by the runners.
 
 ```bash
-git clone https://github.com/BDeMo/Gated-Context-Memory-Pub.git
+git clone https://github.com/nokia-applied-research/Gated-Context-Memory-Pub.git
 cd Gated-Context-Memory-Pub
 python3.12 -m venv .venv
 source .venv/bin/activate
