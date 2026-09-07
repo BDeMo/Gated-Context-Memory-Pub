@@ -6,6 +6,9 @@ is one use of the signal, not a guarantee of improved performance.
 
 This repository contains a clean code snapshot without internal experiment
 ledgers, server configuration, raw datasets, credentials, or development history.
+The release focuses on the main comparison tables. Auxiliary experimental
+launchers are outside the release scope. Runtime logs, event traces, and
+per-example records are not distributed; generated results remain local.
 
 ## Installation
 

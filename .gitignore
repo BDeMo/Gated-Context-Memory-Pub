@@ -12,3 +12,8 @@ out/
 *.safetensors
 *.bin
 *.log
+logs/
+*.log.*
+events.out.tfevents.*
+lightning_logs/
+*.jsonl
